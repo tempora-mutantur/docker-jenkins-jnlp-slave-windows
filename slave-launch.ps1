@@ -49,8 +49,8 @@ if ($env:JENKINS_URL) {
 if ($env:JENKINS_SECRET -and $secret) {
     Write-Warning "Secret is defined twice, in command-line argument and environment variable"
 }
-elseif ($env:JENKINS_URL) {
-    $secret = $env:JENKINS_URL
+elseif ($env:JENKINS_SECRET) {
+    $secret = $env:JENKINS_SECRET
 }
 
 if ($env:JENKINS_AGENT_NAME -and $agentName) {
